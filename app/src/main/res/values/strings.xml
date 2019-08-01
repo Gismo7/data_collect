@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DataCollectModule</string>
+    <string name="smth_went_wrong">Something went wrong</string>
+</resources>

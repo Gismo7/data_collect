@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "net.test.android.datacollectmodule"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation kotlinDependencies.jdk
+    testImplementation testDependencies.junit
+    androidTestImplementation testDependencies.runner
+    androidTestImplementation testDependencies.espresso
+
+    androidxDependencies.appcompat
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+
+    //moxy mvp
+    implementation moxyDependencies.core
+    implementation moxyDependencies.androidx
+    kapt moxyDependencies.kapt
+
+    //data collection
+    implementation project(path: ':datacollection')
+
+    // rx
+    implementation rxDependencies.java
+    implementation rxDependencies.android
+    implementation rxDependencies.kotlin
+
+    // dagger 2
+    implementation daggerDependencies.core
+    kapt daggerDependencies.kapt
+
+    //retrofit
+    implementation retrofitDependencies.gsonConverter
+}

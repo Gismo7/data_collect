@@ -1,0 +1,59 @@
+ext {
+    playServicesVersion = '15.0.2'
+
+    //Support
+    androidxDependencies = [
+            appcompat    : "androidx.appcompat:appcompat:1.0.2"
+    ]
+
+    //Moxy
+    moxyVersion = '1.7.0'
+    moxyDependencies = [
+            androidx: "tech.schoolhelper:moxy-x-androidx:$moxyVersion",
+            core     : "tech.schoolhelper:moxy-x:$moxyVersion",
+            kapt     : "tech.schoolhelper:moxy-x-compiler:$moxyVersion"
+    ]
+
+    //Rx
+    rxJavaVersion = '2.1.5'
+    rxAndroidVersion = '2.0.2'
+    rxKotlinVersion = '2.2.0'
+    rxDependencies = [
+            java   : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+            android: "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            kotlin : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+    ]
+
+    //Retrofit
+    retrofitVersion = '2.4.0'
+    retrofitDependencies = [
+            core         : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            rxAdapter    : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+            gsonConverter: "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    ]
+
+    // dagger 2
+    daggerVersion = '2.11'
+    daggerDependencies = [
+            core: "com.google.dagger:dagger:$daggerVersion",
+            kapt: "com.google.dagger:dagger-compiler:$daggerVersion"
+    ]
+
+    //play services
+    locationVersion = '15.0.1'
+    playServicesDependencies = [
+            location: "com.google.android.gms:play-services-location:$locationVersion"
+    ]
+
+    //test
+    testDependencies = [
+            junit   : 'junit:junit:4.12',
+            runner  : 'androidx.test:runner:1.1.0',
+            espresso: 'androidx.test.espresso:espresso-core:3.1.0'
+    ]
+
+    //kotlin
+    kotlinDependencies = [
+            jdk: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    ]
+}
